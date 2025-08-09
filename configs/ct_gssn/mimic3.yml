@@ -1,0 +1,17 @@
+# MIMIC-III prepared parquet/npz files (after running scripts/convert_mimic3.py)
+inherit: configs/ct_gssn/base.yaml
+
+model:
+  input_dim: 37      # example; depends on your extraction
+  out_dim: 1
+  param_A: "skew_neg"
+  stability_eps: 0.05
+
+data:
+  name: "mimic3"
+  root: "data/mimic3_proc"
+  split: "train"
+  val_split: "val"
+  test_split: "test"
+  adjacency: "knn"    # "knn" | "identity" | "file"
+  knn_k: 8

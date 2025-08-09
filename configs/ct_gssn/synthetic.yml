@@ -1,0 +1,12 @@
+# Synthetic IMTS dataset config (runs out-of-the-box)
+inherit: configs/ct_gssn/base.yaml
+
+data:
+  name: "synthetic_imts"
+  num_samples: 512
+  N: 12
+  L: 48
+  input_dim: 4
+  out_dim: 1
+  obs_prob: 0.5
+  seed: 42

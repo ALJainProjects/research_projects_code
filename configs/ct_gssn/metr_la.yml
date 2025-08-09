@@ -1,0 +1,15 @@
+inherit: configs/ct_gssn/base.yaml
+
+model:
+  input_dim: 1
+  out_dim: 1
+  param_A: "skew_neg"
+  stability_eps: 0.02
+
+data:
+  name: "metr_la"
+  root: "data/metr-la_proc"   # produced by scripts/convert_metr_la.py
+  split: "train"
+  val_split: "val"
+  test_split: "test"
+  use_dynamic_adj: false      # set true if your conversion emits per-step adj

@@ -1,0 +1,10 @@
+inherit: configs/cex_tslm/base.yaml
+
+data:
+  name: "time_mmd"
+  root: "data/time_mmd_proc"   # produced by scripts/convert_time_mmd.py
+  split: "train"
+  val_split: "val"
+  test_split: "test"
+  max_docs: 24
+  max_tokens: 96

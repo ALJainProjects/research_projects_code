@@ -1,0 +1,31 @@
+# Base config for CT-GSSN (shared defaults)
+model:
+  input_dim: 4
+  hidden_dim: 128
+  c_dim: 128
+  msg_dim: 128
+  out_dim: 1
+  num_layers: 4
+  dropout: 0.0
+  a_rank: null
+  agg: "mean"
+  # stability/param options
+  param_A: "free"          # "free" | "skew_neg" | "lowrank_free"
+  stability_eps: 0.01
+  compute_aux: true
+
+train:
+  batch_size: 16
+  num_workers: 4
+  lr: 1.0e-4
+  weight_decay: 1.0e-4
+  max_epochs: 20
+  device: "cuda"
+  lambda_graph: 0.1
+  lambda_contrast: 0.1
+  lambda_stable: 0.01
+  mask_ratio: 0.15
+  log_dir: "runs/ct_gssn"
+  use_wandb: false
+  wandb_project: "ct_gssn"
+  seed: 1337

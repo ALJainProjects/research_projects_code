@@ -1,0 +1,29 @@
+model:
+  ts_in_dim: 4
+  d_model: 256
+  ts_patch_len: 4
+  ts_layers: 2
+  ts_heads: 4
+  txt_vocab: 5000
+  txt_layers: 1
+  dec_layers: 2
+  dec_heads: 4
+  forecast_h: 8
+
+train:
+  batch_size: 8
+  num_workers: 2
+  lr: 1.0e-4
+  weight_decay: 1.0e-5
+  max_epochs: 10
+  device: "cuda"
+  seed: 1337
+  alpha_explain: 0.5
+  beta_causal: 1.0
+  tau: 0.07
+
+data:
+  name: "synthetic_time_mmd"
+  root: "data/time_mmd_proc"
+  max_docs: 16
+  max_tokens: 64

@@ -1,0 +1,11 @@
+inherit: configs/cex_tslm/base.yaml
+
+train:
+  batch_size: 2
+  max_epochs: 1
+  device: "cpu"
+
+data:
+  name: "synthetic_time_mmd"
+  max_docs: 4
+  max_tokens: 16

@@ -1,0 +1,9 @@
+inherit: configs/cex_tslm/time_mmd.yaml
+
+hf:
+  text_encoder_model: "bert-base-uncased"
+  decoder_model: "gpt2"
+  cache_dir: null
+  use_auth_token: null
+  freeze_text_encoder: true
+  freeze_decoder: false
